@@ -4,7 +4,7 @@ import time
 def get_file_info(filepath):
     # Check if file exists
     if not os.path.exists(filepath):
-        return "❌ File not found! Please check the path and try again."
+        return " File not found! Please check the path and try again."
 
     # Extract file details
     file_name = os.path.basename(filepath)
@@ -18,7 +18,7 @@ def get_file_info(filepath):
 
     # Format output
     info = f"""
-📄 FILE INFORMATION
+ FILE INFORMATION
 ---------------------------
 File Name       : {file_name}
 File Size       : {file_size_kb:.2f} KB
@@ -31,13 +31,13 @@ Absolute Path   : {absolute_path}
 
 
 if __name__ == "__main__":
-    print("🕵️ File Metadata Extractor")
+    print(" File Metadata Extractor")
 
     while True:
         filepath = input("\nEnter file path (or type 'exit' to quit): ")
 
         if filepath.lower() == "exit":
-            print("Goodbye! 👋")
+            print("Goodbye! ")
             break
 
         print(get_file_info(filepath))
